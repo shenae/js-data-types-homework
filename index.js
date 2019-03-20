@@ -9,11 +9,11 @@
 // After each step, git add . AND git commit -m "completed part PART-LETTER-HERE"
 // Complete all four steps specified below - each step needs a console.log statement.
 // EXAMPLE - Try running node starter.js before working on any of the parts and see what happens in the terminal.
-const givenVariable = 20;
-const doubledVariable = givenVariable * 2;
-const tripledVariable = givenVariable * 3;
-console.log(doubledVariable);
-console.log('EXAMPLE', 'tripledVariable', tripledVariable);
+// const givenVariable = 20;
+// const doubledVariable = givenVariable * 2;
+// const tripledVariable = givenVariable * 3;
+// console.log(doubledVariable);
+// console.log('EXAMPLE', 'tripledVariable', tripledVariable);
 // After running this and feeling comfortable, feel free to comment the above block of code out (either give each line a // or highlight the block of code and press COMMAND - / )
 
 // DATATYPES
@@ -25,9 +25,11 @@ console.log('EXAMPLE', 'tripledVariable', tripledVariable);
  *********************************/
 
 // Set a constant equal to the name of our SEI instance (capitalized) with the name 'bestClass'.  Log this value.
-
+const bestClass = 'SEI';
+console.log(bestClass);
 // Set a bestClassLowercase variable converting bestClass to a lowercase string. Log this value.
-
+const bestClassLowercase = bestClass.toLowerCase();
+console.log(bestClassLowercase);
 /********************************
  *
  * STEP B: Total
@@ -39,7 +41,8 @@ const amount2 = 3;
 
 // Write an expression here which computes
 // the correct value of a constant "total" based on the values of a and b
-
+const total = amount1 + amount2;
+console.log(total);
 // Log your answer (the value of total) to the console
 
 /********************************
@@ -49,6 +52,8 @@ const amount2 = 3;
  *********************************/
 
 const pounds = 155;
+let kilograms = pounds * 0.45359237;
+console.log(Math.floor(kilograms) + " kilograms");
 
 // Write an expression here which computes
 // the correct value of a variable "kilograms"
@@ -63,34 +68,43 @@ const pounds = 155;
 
 // Create a variable grandHotelTremezzoGuests that is equal to an array containing three strings:
 // 'George Clooney' 'Silvio Berlusconi'  and 'Isabella Rossellini'. Log grandHotelTremezzoGuests.
-
+let grandHotelTremezzoGuests = ['George Clooney', 'Silvio Berlusconi', 'Isabella Rossellini'];
+console.log(grandHotelTremezzoGuests);
 // A new guest is checking in! Add "Fabio" to the end of the array. Log grandHotelTremezzoGuests.
-
+grandHotelTremezzoGuests.push('Fabio');
+console.log(grandHotelTremezzoGuests);
 // False alarm! Fabio was on a roller coaster and got hit in the face with a pigeon 
 // so he won't be able to stay at the hotel remove him from the end of the array.  
 // (We didn't use this method in class you will have to research.)  Log grandHotelTremezzoGuests.
-
+grandHotelTremezzoGuests.pop();
+console.log(grandHotelTremezzoGuests);
 // A new guest is checking in for real! Add 'Mario Batali' to the end of our array. 
 // He is wearing a disguise...but orange crocs. Log grandHotelTremezzoGuests.
-
+grandHotelTremezzoGuests.push('Mario Batali');
+console.log(grandHotelTremezzoGuests);
 // Another new guest is checking in for real! Add 'Mario Balotelli' to the end of our array. 
 // Log grandHotelTremezzoGuests.
-
+grandHotelTremezzoGuests.push('Mario Balotelli');
+console.log(grandHotelTremezzoGuests);
 // Create a variable that is equal to the number of guests staying in our hotel by 
 // checking the items count of grandHotelTremezzoGuests array.  Log this.
-
+let guests = grandHotelTremezzoGuests.length;
+console.log(guests);
 // Create a variable 'grandHotelTremezzoPastGuests' set to an empty Array.
-
+let grandHotelTremezzoPastGuests = [];
 // George Clooney had a scooter accident so has to check out.  
 // Remove him from our array of guests.  Use both the splice method 
 // and the push method to add his name to 'grandHotelTremezzoPastGuests' 
 // while simultaneously removing him from grandHotelTremezzoGuests. 
 // Log both grandHotelTremezzoGuests and grandHotelTremezzoPastGuests in the same log statement.
-
+grandHotelTremezzoGuests.splice(0);
+console.log(grandHotelTremezzoGuests);
+grandHotelTremezzoPastGuests.push('George Clooney');
+console.log(grandHotelTremezzoPastGuests);
 // ***Re-assign*** the variable that is equal to the number of guests staying 
 // in our hotel by checking the items count of grandHotelTremezzoGuests array.  
 // (Don't create a new variable)  Log this.
-
+console.log(guests);
 // The hotel is going to deliver a bottle of Nero de Como to each guest. 
 // Use a for loop to log out '*Silvio Berlusconi* gets a bottle of Nero de Como' for each guest.
 
@@ -98,7 +112,7 @@ const pounds = 155;
 // Tell them to be quiet by using a for loop to say ... '*Silvio Berlusconi* please hush up!!!'
 
 // Create an empty array sleepingGuests
-
+let sleepingGuests = [];
 // The guests passed out. Loop over the guests and add them to the sleepingGuests array.  
 // (Don't remove them from grandHotelTremezzoGuests.) Log out sleepingGuests.
 
